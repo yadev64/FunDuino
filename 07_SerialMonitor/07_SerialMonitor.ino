@@ -16,10 +16,9 @@ void loop() {
 
   float potVal = analogRead(apin) / 4 ;                //Read from potentiometer
   float ratio = potVal/255.0;                          //When finding a decimal value, ensure that everything on both operands are in float
-  Serial.print("ratio :");
-  Serial.println(ratio);
-  float brightness;
-  brightness = ratio * 100;
+  float brightness = ratio * 100;
+
+  
   Serial.print("LED Brightness : ");
   Serial.print(brightness);
   Serial.print("%  ");
@@ -29,8 +28,4 @@ void loop() {
   analogWrite(led, potVal);                          //Set LED to HIGH      
   delay(potVal);                                     //Use the potentiometer input as the delay for LED ON (for smoothening the blinking)
 
- 
-  
-  
-  
 }
