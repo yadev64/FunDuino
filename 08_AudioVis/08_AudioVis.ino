@@ -8,6 +8,9 @@
 
 int led1 = 10;         //Assign LED1
 int led2 = 8;         //Assign LED2
+int led2 = 7;         //Assign LED3
+int led2 = 6;         //Assign LED4
+int led2 = 5;         //Assign LED5
 int apin = A1;       //Assign the Audio Input
 
 
@@ -15,7 +18,7 @@ void setup() {
 
   pinMode(led1, OUTPUT);     //LED to OUTPUT mode
   pinMode(led2, OUTPUT);     //LED to OUTPUT mode
-  pinMode(apin, INPUT);     //Audio to INPUT mode
+  pinMode(apin, INPUT);      //Audio to INPUT mode
 
   //This is where we initialize the seiral monitor
   Serial.begin(9600);       //9600 is the baud rate
@@ -34,6 +37,21 @@ void loop() {
   if(potVal>2){
 
     digitalWrite(led2, HIGH);                           //If audio level is above a certain Limit, turn the LED2 on 
+  }
+
+  if(potVal>3){
+
+    digitalWrite(led3, HIGH);                           //If audio level is above a certain Limit, turn the LED3 on 
+  }
+
+  if(potVal>4){
+
+    digitalWrite(led4, HIGH);                           //If audio level is above a certain Limit, turn the LED4 on 
+  }
+
+  if(potVal>5){
+
+    digitalWrite(led5, HIGH);                           //If audio level is above a certain Limit, turn the LED5 on 
   }
 
   delay(50);                                          //Wait for 50 milliseconds
